@@ -13,6 +13,7 @@
 		E05C66ED1E5081DC00A42D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05C66EC1E5081DC00A42D86 /* Assets.xcassets */; };
 		E05C66F01E5081DC00A42D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05C66EE1E5081DC00A42D86 /* LaunchScreen.storyboard */; };
 		E05C66FB1E5081DC00A42D86 /* MyNewNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C66FA1E5081DC00A42D86 /* MyNewNotificationsTests.swift */; };
+		E05C67061E508F6200A42D86 /* rick_grimes.gif in Resources */ = {isa = PBXBuildFile; fileRef = E05C67051E508F6200A42D86 /* rick_grimes.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E05C66F61E5081DC00A42D86 /* MyNewNotificationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyNewNotificationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05C66FA1E5081DC00A42D86 /* MyNewNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNewNotificationsTests.swift; sourceTree = "<group>"; };
 		E05C66FC1E5081DC00A42D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E05C67051E508F6200A42D86 /* rick_grimes.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rick_grimes.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				E05C66EC1E5081DC00A42D86 /* Assets.xcassets */,
 				E05C66EE1E5081DC00A42D86 /* LaunchScreen.storyboard */,
 				E05C66F11E5081DC00A42D86 /* Info.plist */,
+				E05C67051E508F6200A42D86 /* rick_grimes.gif */,
 			);
 			path = MyNewNotifications;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			files = (
 				E05C66F01E5081DC00A42D86 /* LaunchScreen.storyboard in Resources */,
 				E05C66ED1E5081DC00A42D86 /* Assets.xcassets in Resources */,
+				E05C67061E508F6200A42D86 /* rick_grimes.gif in Resources */,
 				E05C66EB1E5081DC00A42D86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
