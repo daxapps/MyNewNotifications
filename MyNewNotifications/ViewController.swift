@@ -7,19 +7,60 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Request permission
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { (granted, error) in
+            
+            if granted {
+                self.loadNotification()
+            } else {
+                print(error?.localizedDescription ?? "??")
+            }
+        })
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func notifyButtonTapped(sender: UIButton) {
+        scheduleNotification(inSeconds: 5, completion: { success in
+            if success {
+                print("Successfully scheduled notification")
+            } else {
+                print("Error in notification")
+            }
+        })
     }
-
+    
+    func loadNotification() {
+        
+    }
+    
+    func scheduleNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool) -> ()) {
+        
+        let notif = UNMutableNotificationContent()
+        
+        notif.title = "New Notification"
+        notif.subtitle = "These are great!"
+        notif.body = "The new notification options in iOS 10 are what I've always dreamed of!"
+        
+        let notifTrigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "myNotification", content: notif, trigger: notifTrigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+            if error != nil {
+                print(error ?? "??")
+                completion(false)
+            } else {
+                completion(true)
+            }
+            
+        })
+    }
 
 }
 
