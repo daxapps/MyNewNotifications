@@ -52,7 +52,11 @@ class ViewController: UIViewController {
         
         attachment = try! UNNotificationAttachment(identifier: "myNotification", url: imageURL, options: .none)
         
+        // Create our notification content
         let notif = UNMutableNotificationContent()
+        
+        // only for extension 
+        notif.categoryIdentifier =  "myNotificationCategory"
         
         notif.title = "New Notification"
         notif.subtitle = "These are great!"
